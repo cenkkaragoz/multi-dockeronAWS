@@ -1,10 +1,7 @@
-# The appliction is a simple calculation of fabionacci indexes value.
-# The Application is a kind of test about docker containers.
-# Application contains: Redis, Postgres and a worker. 
+# Amazon WS, ElasticBean Multi Container sample. 
+These three apps which are working with redis and postgres are going to be deployed on AWS Elasticbean by travis-ci
 
-# AWS Multicontaine deployment features.
+# Application contains: Redis, Postgres, client, api(or server) and a worker which helps to calculate somethings on the app. 
 
+# AWS Multicontaine deployment #
 
-
-#
-# !! The code is copying from uDemy !!
