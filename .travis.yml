@@ -1,0 +1,25 @@
+  sudo: required
+  services:
+    - docker
+
+  before_install:
+    - docker build -t cengo/multi-dockeronAWS -f ./client/Dockerfile.dev ./client
+  
+  script: 
+    -  docker run -e CI=true cengo/multi-dockeronAWS yarn test -- --coverage
+  
+  after_success:
+    - docker build -t cengo/multi-client ./client
+    - docker build -t cengo/multi-nginx ./nginx
+    - docker build -t cengo/multi-server ./server
+    - docker build -t cengo/multi-worker ./worker
+
+  ## Push these created images to the docker-hub 
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  ## Login to the docker-cli
+    - docker push cengo/multi-client
+    - docker push cengo/multi-nginx
+    - docker push cengo/multi-server
+    - docker push cengo/multi-worker
+    
+  ## 
