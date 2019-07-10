@@ -3,10 +3,10 @@
     - docker
 
   before_install:
-    - docker build -t cengo/multi-dockeronAWS -f ./client/Dockerfile.dev ./client
+    - docker build -t cengo/multi-dockeronaws -f ./client/Dockerfile.dev ./client
   
   script: 
-    -  docker run -e CI=true cengo/multi-dockeronAWS yarn test -- --coverage
+    -  docker run -e CI=true cengo/multi-dockeronaws yarn test -- --coverage
   
   after_success:
     - docker build -t cengo/multi-client ./client
