@@ -22,7 +22,7 @@
     - docker push cengo/multi-worker
   ## Deploy the application
   deploy:
-    provider: elasticbeantalk
+    provider: elasticbeanstalk
     region: us-east-2
     app: docker
     env: Docker-multi-env 
