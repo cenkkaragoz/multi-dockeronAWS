@@ -3,28 +3,28 @@
     "containerDefinitions": [
         {
             "name": "client",
-            "image": "cengo/multi-client",
+            "image": "cengo/multi-client:latest",
             "hostname": "client",
             "essential": false,
             "memory": 64
         },
         {
             "name": "server",
-            "image": "cengo/multi-server", 
+            "image": "cengo/multi-server:latest", 
             "hostname": "api",
             "essential": false,
             "memory": 64
         }, 
         {
             "name": "worker",
-            "image": "cengo/multi-worker",
+            "image": "cengo/multi-worker:latest",
             "hostname": "worker",
             "essential": false,
             "memory": 64
         },
         {
             "name": "nginx",
-            "image": "cengo/multi-nginx",
+            "image": "cengo/multi-nginx:latest",
             "hostname": "nginx",
             "essential": true,
             "portMapping": [
