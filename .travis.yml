@@ -22,4 +22,17 @@
     - docker push cengo/multi-server
     - docker push cengo/multi-worker
     
-  ## 
+  ## Deploy the application
+  deploy:
+    provider: elasticbeantalk
+    region: us-east-2
+    app: docker
+    env: Docker-multi-env 
+    bucket_name: elasticbeanstalk-us-east-2-416358073398
+    bucket_path: docker-multi
+    on:
+      branch: master
+    access_key_id: 
+      secure: $AWS_ACCESS_KEY
+    secret_access_key
+      secure: $AWS_SECRET_KEY
