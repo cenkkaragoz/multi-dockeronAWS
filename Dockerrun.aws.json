@@ -19,7 +19,7 @@
             "name": "worker",
             "image": "cengo/multi-worker",
             "hostname": "worker",
-            "essential": false.
+            "essential": false,
             "memory": 64
         },
         {
