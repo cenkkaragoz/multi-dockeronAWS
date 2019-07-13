@@ -12,7 +12,7 @@
             "name": "server",
             "image": "cengo/multi-server", 
             "hostname": "api",
-            "essential":false,
+            "essential": false,
             "memory": 64
         }, 
         {
@@ -34,7 +34,7 @@
                 }
             ],
             "links": ["client", "server"],
-            "memory": 64,
+            "memory": 64
         }
         
     ]
