@@ -13,7 +13,6 @@
     - docker build -t cengo/multi-nginx ./nginx
     - docker build -t cengo/multi-server ./server
     - docker build -t cengo/multi-worker ./worker
-
   ## Push these created images to the docker-hub 
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   ## Login to the docker-cli
@@ -21,7 +20,6 @@
     - docker push cengo/multi-nginx
     - docker push cengo/multi-server
     - docker push cengo/multi-worker
-    
   ## Deploy the application
   deploy:
     provider: elasticbeantalk
